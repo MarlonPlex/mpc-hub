@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>MPC Hub</title>
+    <link rel="styleSheet" href="style.css" />
+  </head>
+  <body>
+    <section id="page-content">
+      <section id="toolbar">
+        <section id="left-items">
+          <img 
+            id="menu-icon" 
+            src="imgs/menu.svg" 
+            alt="toggle side menu icon">
+          <div id="menu-title-container">
+            <p id="heading">MPC Hub</p>
+            <p id="sub-heading">MUSIC</p>
+          </div>  
+        </section>
+        <section id="right-items">
+          <section id="display-mode-buttons-container">
+            <div class="toggle-button display-mode-button">Exclusive</div>
+            <div class="toggle-button display-mode-button">Inclusive</div>
+            <img src="imgs/information-outline.svg" alt="inclusive and exlusive options information icon">
+          </section>
+          <section id="see-all-tags-dropdown">
+            <p>See All Tags</p>
+            <img src="imgs/chevron-down.svg" alt="open all tags dropdown menu icon">
+          </section>
+          <section id="tags-scroll-container">
+            <img class="scroll-tags-icon scroll-left" src="imgs/chevron-down.svg" alt="scroll tags list to the left icon">
+            <section id="tags-container">
+              <div class="toggle-button tag-button">Tag Name</div>
+              <div class="toggle-button tag-button">Tag Name</div>
+              <div class="toggle-button tag-button">Tag Name</div>
+              <div class="toggle-button tag-button">Tag Name</div>
+            </section>
+            <img class="scroll-tags-icon scroll-right" src="imgs/chevron-down.svg" alt="scroll tags list to the right icon">
+          </section>
+          <section id="tracklist-tools">
+            <img id="search-icon" src="imgs/magnify.svg" alt="search track list icon">
+            <img id="create-tag-icon" src="imgs/plus.svg" alt="create new song tag icon">
+          </section>
+        </section>
+      </section>
+      <section id="tracklist-container">
+        
+        <section id="list-view">
+          <section id="tracklist-column-headings">
+            <p class="list-item-field">Title</p>
+            <p class="list-item-field">Artists</p>
+            <p class="list-item-field">Genres</p>
+            <p class="list-item-field">Tags</p>
+          </section>
+          <section id="track-list">
+            <div class="list-item">
+              <p class="list-item-field">Still Kids</p>
+              <p class="list-item-field">Virtual Riot</p>
+              <p class="list-item-field">EDM</p>
+              <p class="list-item-field">EDM, Chill, Drive</p>
+            </div>
+
+            <div class="list-item">
+              <p class="list-item-field">Human</p>
+              <p class="list-item-field">Apashe, Waisu</p>
+              <p class="list-item-field">EDM, Cinematic, Rap</p>
+              <p class="list-item-field">EDM, 110, Workout</p>
+            </div>
+
+            <div class="list-item">
+              <p class="list-item-field">Still Kids</p>
+              <p class="list-item-field">Virtual Riot</p>
+              <p class="list-item-field">EDM</p>
+              <p class="list-item-field">EDM, Chill, Drive</p>
+            </div>
+            <div class="list-item">
+              <p class="list-item-field">Still Kids</p>
+              <p class="list-item-field">Virtual Riot</p>
+              <p class="list-item-field">EDM</p>
+              <p class="list-item-field">EDM, Chill, Drive</p>
+            </div>
+            
+          </section>
+        </section>
+
+      </section>
+      <section id="controls">
+
+        <section id="playing-track-info">
+          <img src="" alt="image of track art">
+          <div>
+            <p>Playing <strong>Song Name</strong></p>
+            <p>by <strong>Artist Names</strong></p>
+          </div>
+        </section>
+
+        <section id="playback-controls">
+          <div id="track-controls">
+            <img id="previous" class="playback-icon" src="imgs/skip-next.svg" alt="previous track icon">
+            <img id="play" class="playback-icon" src="imgs/play-circle.svg" alt="play track icon">
+            <img id="next" class="playback-icon" src="imgs/skip-next.svg" alt="next track icon">
+          </div>
+
+          <section id="seeker-and-other-controls">
+            <div id="seeker-container">
+              <div id="seeker-progress"></div>
+            </div>
+            <div id="timecodes">
+              <p class="timecodes" id="current-time">0:00</p>
+              <p class="timecodes" id="total-time">0:00</p>
+            </div>
+            <div id="additional-controls">
+              <img src="imgs/repeat-off.svg" alt="toggle track repeat state, currently set to off">
+            </div>
+          </section>
+        </section>
+
+      </section>
+    </section>
+    <script src="./renderer.js"></script>
+  </body> 
+</html>

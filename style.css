@@ -1,0 +1,283 @@
+/* Imports */
+@import url("colors.css");
+
+/*Custom Font faces*/
+@font-face {
+    font-family: "poppins-regular";
+    src: url("fonts/poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "poppins-bold";
+    src: url("fonts/poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: "poppins-thin";
+    src: url(fonts/poppins/Poppins-Thin.ttf);
+}
+
+/*General Rules*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "poppins-regular";
+}
+
+html {
+    font-size: 16px;
+}
+
+/*Page styling rules begins here*/
+#additional-controls {
+    margin: 0rem 4rem;
+}
+#additional-controls img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(250deg) brightness(108%) contrast(100%);
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+#controls {
+    margin: 2rem;
+    min-width: 1450px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#create-tag-icon {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(250deg) brightness(108%) contrast(100%);
+    width: 3rem;
+}
+
+#display-mode-buttons-container {
+    display: flex;
+    align-items: self-start;
+}
+
+#display-mode-buttons-container img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(250deg) brightness(108%) contrast(100%);
+    width: 1rem;
+}
+
+.display-mode-button {
+    border-radius: 5rem;
+    padding: 0.7rem 2rem;
+}
+
+#left-items {
+    align-items: center;
+    display: flex;
+    min-width: max-content;
+}
+
+.list-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    margin: 0rem 1rem;
+    padding: 1rem 2rem 0.5rem 2rem;
+}
+
+.list-item:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.list-item-field {
+    flex: 1;
+}
+
+#list-view {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 0.5rem;
+    margin: 1rem 2rem;
+    min-width: 1450px;
+}
+
+#menu-icon {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(250deg) brightness(108%) contrast(100%);
+    width: 3rem;
+}
+
+#menu-title-container {
+    margin-left: 1.5rem;
+    line-height: 1;   
+}
+
+#menu-title-container #heading {
+    font-size: 2.5rem ;
+    font-family: "poppins-thin", sans-serif;
+}
+
+#menu-title-container #sub-heading {
+    font-size: 2rem;
+    font-family: "poppins-regular", sans-serif;
+}
+
+/* Using flex set to column to arrange page elements because other layout strats I tried that relied on vh didn't act as expected. */
+#page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.playback-icon {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(250deg) brightness(108%) contrast(100%);
+    height: 4rem;
+    width: 4rem;
+}
+
+#playback-controls {
+    display: flex;
+}
+
+#playback-controls #previous {
+    transform: rotate(180deg);
+}
+
+#playing-track-info {
+    display: flex;
+    align-items: center;
+}
+
+#playing-track-info div {
+    margin-left: 1rem;
+}
+
+#playing-track-info img {
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+}
+
+#right-items {
+    display: flex;
+    margin-left: 3rem;
+    min-width: max-content;
+}
+
+#seeker-container {
+    background-color: grey;
+    border-radius: 2px;
+    width: 900px;
+    height: 5px;
+}
+
+#seeker-progress {
+    background-color: white;
+    border-radius: 2px;
+    height: 5px;
+    width: 50%;
+}
+
+#timecodes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timecodes {
+    margin: 0.5rem 1rem;
+}
+
+#track-controls {
+    margin-right: 2rem;
+}
+
+#track-list {
+    overflow: hidden auto;
+    max-height: 700px;
+    min-height: 700px; 
+    scrollbar-width: thin;
+    scrollbar-color: #fcfcfc #fdfdfd18;
+}
+
+
+#tracklist-column-headings {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    font-family: "poppins-bold", sans-serif;
+    padding: 1rem 3rem 0.5rem 3rem;
+}
+
+
+#tracklist-tools {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+#tags-container {
+    align-items: center;
+    display: flex;
+    max-width: 450px;
+    overflow: hidden;
+}
+
+#tags-scroll-container {
+    display: flex;
+    margin-right: 2rem;
+}
+
+.toggle-button {
+    background-color: var(--button-off);
+    border-radius: 5rem;
+    color: var(--black);
+    font-family: "poppins-regular", sans-serif;
+    margin: 0rem 0.5rem;
+    padding: 0.7rem 2rem;
+    min-width: max-content;
+    max-height: max-content;
+}
+
+.tag-button {
+    border-radius: 5rem;
+    padding: 0.4rem 1rem;
+}
+
+#toolbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.scroll-tags-icon {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(250deg) brightness(108%) contrast(100%);
+    width: 2rem;
+}
+
+.scroll-left {
+    transform: rotate(90deg);
+}
+
+.scroll-right {
+    transform: rotate(-90deg);
+}
+
+#search-icon {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(250deg) brightness(108%) contrast(100%);
+    width: 3rem;
+}
+
+#see-all-tags-dropdown {
+    align-items: center;
+    display: flex;
+    font-family: "poppins-regular", sans-serif;
+    font-size: 1.3rem;
+    margin: 0rem 2rem;
+}
+
+#see-all-tags-dropdown img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(250deg) brightness(108%) contrast(100%);
+    width: 1.5rem;
+}
+
+#see-all-tags-dropdown p {
+    margin-right: 0.2rem;
+}
