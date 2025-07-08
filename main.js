@@ -1,22 +1,19 @@
-const { app, BrowserWindow, shell } = require('electron');
+const { app, BrowserWindow } = require('electron/main');
 const fs = require('node:fs');
 const path = require('node:path');
-const { fileURLToPath } = require('node:url');
 
 
-/* Electron App functions*/
+/* Electron App Functions*/
+
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
-    height: 600
+    height: 600,
+    webPreferences: {
+      preload: path.join(__dirname, "preload.js"),
+    }
   })
 
-  win.loadFile('index.html')
-}
-
-
-app.whenReady().then(() => {
-  createWindow()    
 
   const musicDirectory = app.getPath("music");
   var filteredFilePaths = [];
@@ -34,44 +31,31 @@ app.whenReady().then(() => {
     }
   });
 
+  let trackData = updateData(filteredFilePaths);
 
-  let trackData = [
-    {
-      name: "Stronger",
-      path: "",
-      artists: "TheFatRat",
-      genres: [],
-      tags:[],
-    },
-    {
-      name: "Still Kids",
-      path: "",
-      artists: "Virutal Riot",
-      genres: [],
-      tags:[],
-    },
-    {
-      artists: "Apashe, Waisu",
-      genres: ["EDM", "Trap"],
-      name: "Human",
-      path: "",
-      tags:[],
-    },
-  ];
+  
+  win.webContents.on('did-finish-load', () => {
+    win.webContents.send("tracklist-loaded", trackData);
+  });
 
-  updateData(filteredFilePaths);
+  win.maximize();
+
+  // win.webContents.openDevTools();
+  
+  win.loadFile('index.html');
+}
 
 
-  /* TODO: Task 2.4 - update the UI*/
+app.whenReady().then(() => {
+  createWindow()    
+  
 
 })
 
-/* Auxillary functions*/
+/* Helper Functions */
 
-/*
-updateData() Extracts necessary info from track's file path to populate trackData object array.
-this object array will be used for updating the UI and loading the tracks.
-*/
+// updateData() parses necessary info from track's file path string to populate the object array named trackData.
+// This data in this array's objects will be used for updating the UI and loading the tracks.
 function updateData(filePaths) {
   let trackData = [];
 
@@ -92,5 +76,6 @@ function updateData(filePaths) {
     trackData[lastIndex].tags = [];
     
   };
-  console.log(trackData);
+
+  return trackData;
 };
