@@ -1,0 +1,25 @@
+/* Imports */
+@import url("css/colors.css");
+@import url("css/fonts.css");
+
+@import url("css/index-layout.css");
+@import url("css/menu-bar.css");
+
+
+/*General Rules*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(12.75, 12.75, 12.75);
+    color: white;
+    font-family: "poppins-regular";
+}
+
+html {
+    font-size: 16px;
+}
+
