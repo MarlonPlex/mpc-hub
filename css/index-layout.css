@@ -1,0 +1,57 @@
+#audio-controls {
+    background-color: blue;
+    grid-column: 26 / 31;
+    grid-row: 10 / 11;
+} 
+
+/*Using grid layout as it makes resizing and expanding panels easier alignment-wise*/
+/*
+* If track count is changed in future, add or subtract whatever value you changed the 
+* the track count by to the grid-column and grid-row properties for each grid item.
+* This is why I used the line numbers instead of the span keyword.
+*/
+#grid-wrapper {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    height: 100vh;
+    padding: 1rem 0.5rem;
+}
+
+#menu-bar {
+    background-color: red;
+    grid-row: 1 / 11;
+    grid-column: 1 / 2;
+}
+
+#playback-controls {
+    background-color: greenyellow;
+    grid-column: 2 / 7;
+    grid-row: 10 / 11;
+}
+
+#seeker {
+    background-color: green;
+    grid-column: 2 / 31;
+    grid-row: 9 / 10;
+}
+
+#tags-menu {
+    background-color: aqua;
+    grid-column: 26 / 31;
+    grid-row: 1 / span 1;
+}
+
+#title {
+    background-color: rebeccapurple;
+    grid-column: 2 / 7;
+    grid-row: 1 / 2;
+} 
+
+#tracklist-area {
+    background-color: pink;
+    grid-column: 2 / 31;
+    grid-row: 2 / 9;
+}
+

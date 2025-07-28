@@ -1,0 +1,19 @@
+.menu-icons {
+    filter: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(26%) hue-rotate(113deg) brightness(106%) contrast(109%);
+    width: 2rem;
+}
+
+#menu-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icons-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+

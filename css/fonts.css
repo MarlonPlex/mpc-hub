@@ -1,0 +1,15 @@
+/*Custom Font faces*/
+@font-face {
+    font-family: "poppins-regular";
+    src: url("../fonts/poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "poppins-bold";
+    src: url("../fonts/poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: "poppins-thin";
+    src: url("../fonts/poppins/Poppins-Thin.ttf");
+}
