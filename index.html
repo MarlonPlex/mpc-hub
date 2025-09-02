@@ -14,27 +14,94 @@
     <link rel="styleSheet" href="index-styles.css" />
   </head>
   <body>
-    <div id="grid-wrapper">
-
+    <div id="content-wrapper">
       <div id="menu-bar">
         <img id="mplex-icon" class="menu-icons" src="imgs/mplex-logo.svg" alt="toggle menu bar icon">
-        <div class="menu-icons-container">
+        <div class="menu-icons-sub-container">
           <img class="menu-icons" src="imgs/home-variant.svg" alt="home menu icon">
           <img class="menu-icons" src="imgs/music-note-eighth.svg" alt="music menu icon">
         </div>
         <img id="settings-icon" class="menu-icons" src="imgs/cog.svg" alt="open settings icon">
       </div>
       
-      <div id="title"></div>
-      <div id="tags-menu"></div>
-      <div id="tracklist-area">
-        <div>ONE</div>
-        <div>TWO</div>
-        <div>THREE</div>
-      </div>
-      <div id="seeker"></div>
-      <div id="playback-controls"></div>
-      <div id="audio-controls"></div>
+      <section id="menu-panels-container">
+        <section id="header-panels">
+          <div id="title"><p>MPC Hub\ <b>Music</b></p></div>
+
+          <div id="tags-menu">
+              <p>Manage Tags</p>
+              <img src="imgs/chevron-down.svg" alt="open tags menu icon">
+          </div>
+        </section>
+
+        <section id="tracklist-and-seeker-container">
+          <div id="tracklist-area">
+            <div id="tracklist-header">
+              <p><!--placeholder for aligment with track items re-order handle--></p>
+              <p class="centered-title" >Cover</p>
+              <p>Name</p>
+              <p>Artists</p>
+              <p>Genres</p>
+              <p>Tags</p>
+              <img class="tracklist-area-icon" src="imgs/magnify.svg" alt="search tracks icon">
+            </div>
+            <ul id="tracklist-items-container">
+              <li class="track-item">
+                <img  class="tracklist-area-icon" src="imgs/reorder-horizontal.svg" alt="re-order track handle icon">
+                <img class="cover-art-img" src="" alt="track art image">
+                <p>Still Kids</p>
+                <p>Virtual Riot, Fox</p>
+                <p>Trap, Dubstep, Pop, Funk, Phonk, some, more, text, this, must</p>
+                <p>Chill, Drive, Flying</p>
+                <img class="tracklist-area-icon" src="imgs/dots-vertical.svg" alt="additional track options">
+              </li>
+            </ul>
+            <div id="tracklist-footer">
+              <p>Tracklist Statistics:&nbsp;</p>
+              <p>[Tags Selected: 00 Tags]&nbsp;</p>
+              <p>[Track Count: 000 Tracks]&nbsp;</p>
+            </div>
+          </div>
+        
+          <div id="seeker">
+            <p>0:00</p>
+            <div id="seeker-background">
+              <div id="seeker-filled">
+                <div id="seeker-head"></div>
+              </div>
+            </div>
+            <p>0:00</p>
+          </div>
+        </section>
+        
+        <section id="footer-panels">
+            <div id="currently-playing-info">
+              <img src="" alt="">
+              <div>
+                <p>Playing <span class="playing-text-bold">Still Kids</span><br>by <span class="playing-text-bold">Virtual Riot, Other Artist</span></p>
+              </div>
+            </div>
+
+            <div id="central-controls">
+              <div class="playback-controls">
+                <div><img class="icons icons-next-play" src="imgs/playback-icons/skip-previous.svg" alt="skip to previous track icon"></div>
+                <div><img class="icons icons-next-play" src="imgs/playback-icons/play.svg" alt="play track icon"></div>
+                <div><img class="icons icons-next-play" src="imgs/playback-icons/skip-next.svg" alt="skip to next track icon"></div>
+              </div>
+              
+              <div class="playback-controls">
+                <div><img class="icons icons-shuffle-loop" src="imgs/playback-icons/repeat-off.svg" alt="repeat track off icon"></div>
+                <div><img class="icons icons-shuffle-loop" src="imgs/playback-icons/shuffle.svg" alt="shuffle tracks icon"></div>
+              </div>
+            </div>            
+          
+          <div id="audio-controls">
+                <p>Audio Controls</p>
+                <img src="imgs/chevron-up.svg" alt="open audio menu icon">
+          </div>
+        </section>
+      </section>
+      
     </div>
     <script src="./renderer.js"></script>
   </body> 

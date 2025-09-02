@@ -1,0 +1,16 @@
+#tags-menu {
+    align-items: center;
+    background-color: var(--panelBackground);
+    border: 1px solid var(--panelBorders);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    min-height: 50px;
+    min-width: 250px;
+}
+
+#tags-menu img {
+    filter: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(26%) hue-rotate(113deg) brightness(106%) contrast(109%);
+    width: 25px;
+}

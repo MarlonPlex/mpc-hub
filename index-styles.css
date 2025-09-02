@@ -2,11 +2,18 @@
 @import url("css/colors.css");
 @import url("css/fonts.css");
 
-@import url("css/index-layout.css");
 @import url("css/menu-bar.css");
+@import url("css/music_screen/screen-title.css");
+@import url("css/music_screen/tags-menu.css");
+@import url("css/music_screen/tracklist-panel.css");
+@import url("css/music_screen/seeker.css");
+@import url("css/music_screen/playback-controls.css");
+@import url("css/music_screen/audio-controls.css");
+
 
 
 /*General Rules*/
+/*This will probably be in its own stylesheet once more screens are added.*/
 * {
     margin: 0px;
     padding: 0px;
@@ -14,12 +21,60 @@
 }
 
 body {
-    background-color: rgb(12.75, 12.75, 12.75);
+    background-color: var(--background);
     color: white;
-    font-family: "poppins-regular";
+    font-family: "poppins-regular", sans-serif;
 }
 
 html {
     font-size: 16px;
+}
+
+/*Wrappers for different panel groups.*/
+
+#content-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    min-height: 480px;
+    min-width: 720px;
+    padding: 0.5rem;
+    gap: 10px;
+}
+
+#header-panels {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: 50px;
+    /* background-color: red; */
+}
+
+#menu-panels-container {
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#tracklist-and-seeker-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 8;
+    width: 100%;
+}
+
+#footer-panels {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    /* height: 20vh; */
 }
 

@@ -1,0 +1,70 @@
+.centered-title {
+    align-self: center;
+    justify-self: center;
+}
+
+.cover-art-img {
+    background-color: var(--white);
+    height: 50px;
+    justify-self: center;
+    text-indent: -9999px;
+    width: 50px;
+}
+
+#tracklist-area {
+    background-color: var(--panelBackground);
+    border: 1px solid var(--panelBorders);
+    border-radius: 10px; /*Ensure this matches tracklist areas's footer and header containers' border-radius values as well.*/
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tracklist-area-icon {
+    align-self: center;
+    filter: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(26%) hue-rotate(113deg) brightness(106%) contrast(109%);
+    justify-self: center;
+    width: 20px;
+}
+
+#tracklist-header {
+    display: grid;
+    background-color: var(--panelBG-one);
+    border-radius: 10px 10px 0px 0px; /*This must always match the border-radius property's value on the parent container #tracklist-area*/
+    /*This grid-template-columns property directly co-responds to .track-item,
+    so if you change it, change the latter to reflect said changes as well.*/
+    grid-template-columns: 30px 75px 1fr 0.8fr 0.6fr 0.6fr 25px;
+    padding: 0.2rem 0px;
+}
+
+#tracklist-footer {
+    background-color: var(--panelBG-one);
+    border-radius: 0px 0px 10px 10px; /*This must always match the border-radius property's value on the parent container #tracklist-area*/
+    display: flex;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+}
+
+#tracklist-items-container {
+    flex: 1;
+    list-style-type: none;
+}
+
+.track-item {
+    align-items: center;
+    display: grid;
+    gap: 5px;
+    /*This grid-template-columns property directly co-responds to #tracklist-header, 
+    so if you change it, change the latter to reflect said changes as well.*/
+    grid-template-columns: 30px 75px 1fr 0.8fr 0.6fr 0.6fr 25px;
+    grid-auto-rows: 50px; /*Height of cover art image*/
+    max-height: 50px;
+}
+
+.track-item p {
+    max-height: 3.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+

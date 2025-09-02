@@ -1,0 +1,33 @@
+#seeker {
+    align-items: center;
+    border: 1px solid var(--panelBorders);
+    border-radius: 10px;
+    background-color: var(--panelBackground);
+    display: flex;
+    padding: 2px 15px;
+}
+
+#seeker-background {
+    background-color: grey;
+    border-radius: 2px;
+    flex: 1;
+    height: 5px;
+    margin: 0px 10px;
+}
+
+#seeker-head {
+    background-color: var(--white);
+    bottom: -5px;
+    height: 15px;
+    position: absolute;
+    right: 0px;
+    width: 2px;
+}
+
+#seeker-filled {
+    background-color: var(--white);
+    border-radius: 10px;
+    height: 5px;
+    position: relative;
+    width: 50%;
+}
