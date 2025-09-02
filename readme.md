@@ -37,6 +37,14 @@
 - [ ] Shortcuts 
     - [ ] Play, pause, next, previous (compatible with keyboard function keys as well)
 
+## Images
+### Mock-ups
+![Image of music player ui mockups](./readme_images/mockups/mpc_music_ui_r1_menuscreen.jpg)
+
+### Screenshots
+![Screenshot of first version of music player](./readme_images/screenshots/music%20player_basic.png)
+
+
 ## Future Plans
 - Media API implementation for OS playback controls and data
 - Auto add genre tags using online APIs/sources
