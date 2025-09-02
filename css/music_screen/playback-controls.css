@@ -1,0 +1,77 @@
+#central-controls {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#currently-playing-info {
+    align-items: center;
+    background-color: var(--panelBackground);
+    border: 1px solid var(--panelBorders);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    min-width: 200px;
+    overflow: hidden;
+}
+
+#currently-playing-info div {
+    margin: 0px 10px;
+    overflow: hidden;
+}
+
+#currently-playing-info div p{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#currently-playing-info img {
+    background-color: white;
+    border-radius: 10px;
+    height: 75px;
+    justify-self: center;
+    margin: 10px 0px;
+    object-fit: cover;
+    width: 75px;
+}
+
+.icons {
+    filter: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(26%) hue-rotate(113deg) brightness(106%) contrast(109%);
+    margin: 0px 5px;
+}
+
+.icons-next-play {
+    width: 40px;
+}
+
+.icons-shuffle-loop {
+    width: 30px;
+    margin: 0px 10px;
+}
+
+.playback-controls {
+    background-color: var(--panelBackground);
+    border: 1px solid var(--panelBorders);
+    border-radius: 10px;
+    display: flex;
+    width: max-content;
+    height: 45px;
+}
+
+.playback-controls div:first-child {
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 10px;
+}
+
+.playback-controls div:last-child {
+    border-radius: 0px 10px 10px 0px;
+    padding-right: 10px;
+}
+
+
+.playback-controls div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}

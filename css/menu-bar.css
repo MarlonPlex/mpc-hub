@@ -1,19 +1,28 @@
 .menu-icons {
     filter: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(26%) hue-rotate(113deg) brightness(106%) contrast(109%);
-    width: 2rem;
+    width: 25px;
+}   
+
+#mplex-icon {
+    width: 20px;
 }
 
 #menu-bar {
+    align-items: center;
+    background-color: var(--panelBackground);
+    border: 1px solid var(--panelBorders);
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    padding: 1rem 0.5rem;
 }
 
-.menu-icons-container {
+.menu-icons-sub-container {
     display: flex;
     flex: 1;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
+    padding: 2rem 0rem;
 }
 

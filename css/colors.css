@@ -2,4 +2,8 @@
     --button-off: #ffffff;
     --white: white;
     --black: black;
+    --background: rgb(12.75, 12.75, 12.75);
+    --panelBackground: rgb(25.5, 25.5, 25.5);
+    --panelBG-one: rgb(38.25, 38.25, 38.25);
+    --panelBorders: rgb(75, 75, 75);
 }
