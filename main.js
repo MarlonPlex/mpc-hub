@@ -4,9 +4,6 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 
-
-/* Electron App Functions*/
-
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
@@ -20,7 +17,7 @@ const createWindow = () => {
   
   win.maximize();
 
-  // win.webContents.openDevTools();s
+  // win.webContents.openDevTools();
   
   win.loadFile('index.html');
 }
