@@ -1,6 +1,48 @@
 # Project MPC Hub
 ## Current Version: v0.0
-**A desktop application to assist you in your personal life. Starting with the ideal music player.**
+
+## Contents
+- Description 
+- How to run
+- Images
+- Music Player Roadmap
+- Future Plans
+
+
+## Description
+**A desktop application to assist you in your personal life. Starting with the ideal (in my opinion) music player.**
+
+To give some insight on what makes the approach for this music player ideal to me, essentially:
+- All tracks in your library will be presented to you by default.
+- From here you add tags to them, which essentailly is like creating a playlists, however, the "playlist" is abstracted away as a filterable tag. 
+- To explain that further, you would filter the display of tracks by just selecting the tags of the tracks you want displayed (tags you create for differnt moods, genres, etc.)
+- That functionality is the main feature I've been looking for in a music player, dynamically mixing the content of different playlists. However, it goes further. 
+- You can re-order the tracks currently being displayed based on your tag filters, and save this as a "playlist".
+- I say "playlist", because what it actually is doing, is saving the combination of tag filter and the order of tracks rather than saving tracks to a specified list which is how a typical playlist works.
+
+
+## How to Run
+### Prerequisites
+MPC Hub is an application built with the [Electron](https://www.electronjs.org) Framework. Thus the following pre-requisites will be needed:
+- Node.js Runtime (Electron recommends using the latest LTS version)
+- npm
+### Run Locally
+To run the program locally:
+1. Clone the repository.
+2. Navigate to the project directory
+3. Install project dependencies using `npm install`
+4. Start the application using `npm run start` (Executes the `electron .` command which can be found  in package.json, under the `scripts` object `start` property).
+
+To build the electron app see (Electron's offical documentation)[https://www.electronjs.org/docs/latest/tutorial/tutorial-packaging].
+
+## Images
+After running the app, you should see the screen below.
+### Screenshot(s) from App
+![Screenshot of first version of music player](./readme_images/screenshots/music%20player_basic.png)
+
+### Original UI Mock-up(s)
+![Image of music player ui mockups](./readme_images/mockups/mpc_music_ui_r1_menuscreen.jpg)
+
 
 ## Music Player RoadMap
 ### v1.0
@@ -36,13 +78,6 @@
     - [ ] Settings menu
 - [ ] Shortcuts 
     - [ ] Play, pause, next, previous (compatible with keyboard function keys as well)
-
-## Images
-### Mock-ups
-![Image of music player ui mockups](./readme_images/mockups/mpc_music_ui_r1_menuscreen.jpg)
-
-### Screenshots
-![Screenshot of first version of music player](./readme_images/screenshots/music%20player_basic.png)
 
 
 ## Future Plans
