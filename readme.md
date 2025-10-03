@@ -33,7 +33,7 @@ To run the program locally:
 3. Install project dependencies using `npm install`
 4. Start the application using `npm run start` (Executes the `electron .` command which can be found  in package.json, under the `scripts` object `start` property).
 
-To build the electron app see (Electron's offical documentation)[https://www.electronjs.org/docs/latest/tutorial/tutorial-packaging].
+To build the electron app see [Electron's offical documentation](https://www.electronjs.org/docs/latest/tutorial/tutorial-packaging).
 
 ## Images
 After running the app, you should see the screen below.
@@ -83,15 +83,15 @@ After running the app, you should see the screen below.
 ## Future Plans
 - Media API implementation for OS playback controls and data
 - Auto add genre tags using online APIs/sources
-- Located and track more Meta data(date published, album, duration, listens)
-- Chorus-Verse volume preferences (consitent volume, louder chorus)
-- Docker Repositioning (Very far future)
+- Locate and track more Meta data(date published, album, duration, listens)
+- Chorus-Verse volume preferences (consistent volume, louder chorus)
+- Panel Repositioning (Very far future)
 - Custom Theming
 - Gap-less playback
 - Limiter controls
 - Playback Speed implementation
-- Waveform track seeker
-- Smart Auto Mixer (Personal favourite future idea)
+- Waveform-style track seeker
+- Smart Auto Mixer (Personal favourite future idea). Includes:
     - transitional playback; fading between tracks
     - playback order determined by various heuristics (key, mood/tags, tempo, desktop activity, weather, location etc.)
 - Different tracklist views
